@@ -1,10 +1,10 @@
-# Git Definitions
+# Git Definitions with minor changes.
 
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
 
-	Version control is something that allows us to view the entire history of revisions. It is useful because many people can work and contribute to the same project and go back in history to make changes if necessary.
+	Version control is something that allows us to view the entire history of revisions. It is useful because many people can work and contribute to the same project and go back in history to make changes.
 
 * What is a branch and why would you use one?
 
