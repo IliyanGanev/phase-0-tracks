@@ -8,35 +8,40 @@
 
 <form action="success.html" method="post">
 <div>
-      <label>Car model</label>
+  <fieldset>
+      <p><label>Car model</label></p>
       <select name="car">
         <option value="mazda">mazda</option>
         <option value="subaru">subaru</option>
         <option value="honda">honda</option>
         <option value="toyota">toyota</option>
       </select>
-    </div>
-    
-    <div>
-    <label>Cylinders</label>
-    <input type="checkbox" name="Cylinders" value="4 cylinders">4 Cylinders</input>
-     <input type="checkbox" name="Cylinders" value="6 cylinders">6 Cylinders</input>
-      <input type="checkbox" name="Cylinders" value="8 cylinders">8 Cylinders</input>
-    </div>
-    <div>
-    	<label>Desctiption</label>
-    	<textarea name="description"></textarea>
-    </div>
-    <div>
-    	<label>Name:</label>
-    	<input type="name" name="fullname">
-    </div>
-<div>
-	<label>e-mail</label>
-	<input type="e-mail" name="e-mail">
+  </fieldset>
+</div>
+ <div>
+  <fieldset>
+    <p><label>Cylinders</label></p>
+    <input type="checkbox" name="Cylinders" value="4 cylinders">
+    <input type="checkbox" name="Cylinders" value="6 cylinders">
+    <input type="checkbox" name="Cylinders" value="8 cylinders">
+  </fieldset>
 </div>
 <div>
-	<label>password</label>
+  <fieldset>
+    <p><label>Desctiption</label></p>
+    <textarea name="description"></textarea>
+  </fieldset>
+</div>
+<div>
+    <p><label>Name:</label></p>
+    <input name="fullname">
+</div>
+<div>
+	<p><label>e-mail:</label></p>
+	<input type="email" name="e-mail">
+</div>
+<div>
+	<p><label>password:</label></p>
 	<input type="password" name="password">
 </div>
 <p><button>submit</button></p>
