@@ -2,14 +2,22 @@
 	font-size:.8em;
 }
 .job {
-	background-color:#e9e5dc;
-	border-radius:20px;
-	padding:2px;
-	margin-bottom:5px;
+	background-color: #e9e5dc;
+	border-radius: 15px;
+	padding: 2px;
+	margin-bottom: 5px;
 }
 .list{
-	font-size :.8em;
+	font-size : .8em;
+}
+
+/* Pseudo classes*/
+#resume-title:hover{
+	background-color: #E0F0DA;
 }
 section h3{
-	color :red;
+	color: #75C858;
+}
+ul li:first-child{
+	color: #FFA833;
 }
