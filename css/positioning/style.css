@@ -1,0 +1,24 @@
+.container{
+	positon:relative;
+	margin-left: 40%;
+	
+}
+
+#octopus {
+position:absolute;
+margin-top:70px;
+
+}
+
+#hat{
+	position:absolute;
+	margin-top: 0x;
+	margin-left: -20px;
+}
+
+#glasses{
+	position:absolute;
+	margin-top:170px;
+	margin-left:45px;
+
+}
