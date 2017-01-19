@@ -1,24 +1,23 @@
 .container{
-	positon:relative;
+	position: relative;
 	margin-left: 40%;
 	
 }
 
 #octopus {
-position:absolute;
-margin-top:70px;
+	position: absolute;
+	margin-top: 70px;
 
 }
 
 #hat{
-	position:absolute;
-	margin-top: 0x;
+	position: absolute;
 	margin-left: -20px;
 }
 
 #glasses{
-	position:absolute;
-	margin-top:170px;
-	margin-left:45px;
+	position: absolute;
+	margin-top: 170px;
+	margin-left: 45px;
 
 }
