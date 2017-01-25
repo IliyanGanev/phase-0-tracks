@@ -1,0 +1,52 @@
+Robot in an elevator algorithm.
+
+
+-Decide which floor are you going to.
+-Until the desired floor is reached.
+	-If desired floor > current floor:
+		-Press up button.
+	-Else, if desired floor is the current floor:
+	 	-Stay where you are.
+	-Else: 
+		-Press down button.
+	-Until elevator arrives, move 2 feet to the left so other robots can exit.
+		- If door opens:
+		 Wait for 4 seconds. Move 2 feet to the right and 4 feet straight to enter. Turn 180 degrees and face the console.
+		-Else:
+		 -Wait until door opens.	  
+	-When in the elevator move two feet towards the button console.
+	-Subtract desired floor number and current floor number.
+		-if desired floor minus the current floor is positive number.
+		 	-Press the resulting number of buttons in going up direction.
+		-else 
+			-Press the resulting negative number of floors(buttons) in down direction. 
+	Until door opens move near the door and wait.		
+When door opens exit and wait for further instructions.
+
+
+
+Car refueling algorithm.
+
+-Stop the car next to the gas pump.
+	-Open the door and exit the car.
+	-Go to where the fuel cap is and open it.
+	-Go to the pump.
+	-Choose method of payment.
+		-If paying by card: 
+			-Pay and choose the type of fuel.
+		-Else:
+			-Go inside and pay by cash.
+			-Return to the pump.
+			-Choose fuel type.	
+	-Remove the nozzle and start pumping.
+		-If pumping has not finished:
+		 	-Wait.
+		 -Else:
+		 	-Put the nozzle back.
+	Do steps two and three in reverse order.
+Start the car and drive away.		 	
+
+
+
+
+
