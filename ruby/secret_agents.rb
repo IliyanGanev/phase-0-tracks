@@ -19,20 +19,23 @@
 def encrypt(password)
   counter = 0
 while counter < password.length
-	print password[counter].next
+	p = password[counter].next
+print p
   counter += 1
 end
 end
-encrypt("sss")
-
-
 
 
 def decrypt(password)
-  counter = 0
+counter = 0
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 while counter < password.length
-	p=password[counter].next
-	p p
-  counter += 1
+	a = password[counter]
+	d = alphabet.index(a)-1
+ print alphabet[d]
+ counter += 1
+
 end
 end
+
+
