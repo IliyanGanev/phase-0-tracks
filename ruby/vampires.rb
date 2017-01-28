@@ -59,7 +59,7 @@ elsif (!year && !garlic) || !insurance
   puts "Probably a vampire."
 elsif (!year && !garlic) && !insurance
   puts "Almost certainly a vamire."
-elsif name == "Drake Cula" || "Fu Tang"
+elsif name == "Drake Cula"
   puts "Definitely a vampire"
 else
   puts "Results inconclusive."
