@@ -23,7 +23,7 @@ client = {
 
 puts "What is the name of the client?"
 client_name = gets.chomp
-client[:name] = client_name.to_s
+client[:name] = client_name
 
 puts "What is client's age?"
 client_age = gets.chomp
