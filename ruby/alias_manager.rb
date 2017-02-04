@@ -5,15 +5,6 @@
 #Split the two names, reverse and capitalize them.
 #Ask the user for input.
 #Store the real and fake names.
-#Print all the names.
-
-#Write a method that takes spy's real name as a an argument.
-#Pass each character to another function that will change the vowels and consonants and deal with edge cases.
-#Change the vowels to the next vowel.
-#Change all the consonants to the next consonant.
-#Split the two names, reverse and capitalize them.
-#Ask the user for input.
-#Store the real and fake names.
 #Print all names.
 
 def translate(char)
