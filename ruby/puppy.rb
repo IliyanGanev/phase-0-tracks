@@ -8,7 +8,7 @@
 #Ears: 2
 #Tail: yes
 
-#BEHAVIOR-----------
+#BEHAVIOR(methods)-----------
 
 #bark
 #play
