@@ -1,7 +1,7 @@
-#CLASS--------------
+#ANIMAL(class)--------------
 #Puppy
 
-#Characteristics(attributes)
+#CHARACTERISTICS(attributes)
 
 #Legs: 4
 #Eyes: 2
@@ -10,7 +10,8 @@
 
 #BEHAVIOR(methods)-----------
 
-#bark
-#play
-#jump
-#run
+#Bark
+#Play
+#Jump
+#Run
+#Fetch
