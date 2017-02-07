@@ -1,5 +1,4 @@
-#ANIMAL(class)--------------
-#Puppy
+#PUPPY-------------------
 
 #CHARACTERISTICS(attributes)
 
