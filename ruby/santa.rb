@@ -4,7 +4,7 @@ class Santa
 	attr_accessor :gender, :reindeer_ranking
 	
 	def initialize(gender, ethnicity)
-		p "Initializing Santa instance..."
+		puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
 		@age = 0
@@ -14,13 +14,13 @@ class Santa
 	end
 
 	def speak 
-		p "Ho, ho, ho!Haaaappy holidays!"
+		puts "Ho, ho, ho!Haaaappy holidays!"
 		p "Said the #{@ethnicity} #{@gender} santa."
 
 	end
 
 	def eat_milk_and_cookies(type)
-		p "That was a good #{type}"
+		puts "That was a good #{type}"
 	end
 
 	def celebrate_birthday
@@ -57,9 +57,16 @@ santas[2].eat_milk_and_cookies("Snickers")
 santa = Santa.new("male", "white")
 santa.speak
 santa.eat_milk_and_cookies("Mars")
-
-p "Santa has a birthday and he is #{santa.celebrate_birthday} years old"
+puts "Santa has a birthday and he is #{santa.celebrate_birthday} years old"
 santa.gender = "male"
-p "Santa's gender is #{santa.gender},he is #{santa.ethnicity} and #{santa.age} years old."
-p santa.get_mad_at("Vixen")
+puts "Santa's gender is #{santa.gender},he is #{santa.ethnicity} and #{santa.age} years old."
+puts santa.get_mad_at("Vixen")
 p santa.reindeer_ranking
+
+#Create a variable with randomly selected genders
+#Create a variable for randomly selected ethnicities.
+#Create a variable with random number between 0 and 140.
+#Create a large number of santas with randomly selected attributes.
+#Print out santas attributes.
+
+
