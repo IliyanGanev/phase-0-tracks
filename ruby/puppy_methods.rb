@@ -1,29 +1,69 @@
 class Puppy
 
-  def fetch(toy)
-    puts "I brought back the #{toy}!"
-    toy
-  end
+	def initialize
+		puts "Initializing new puppy instance..."
+	end
 
-  def speak(number)
-  	number.times{ puts "Woof!"}	
+  	def fetch(toy)
+   		 puts "I brought back the #{toy}!"
+    	 
   	end
-  	
+
+  	def speak(number)
+  		number.times{ puts "Woof!"}	
+ 	end
+ 			 	
   	def roll_over
   		puts "*rolls over*"
   	end
 
 	def dog_years(years)
-	 years * 7
+		doggyears = years * 7
+		"The puppy is #{doggyears} dog years old"
 	end
 
+	def sit
+		puts "*Puppy sits*"
+	end
 
 end
 
+#fido driver code
 fido = Puppy.new
 fido.fetch("ball")
 fido.speak(2)
 fido.roll_over
 puts fido.dog_years(3)
+fido.sit 
 
 
+
+class Gymnast
+
+  def initialize
+    puts "Initialized an instance of Gymnast."
+  end
+
+ def jump(number)
+    "Gymnast jumps #{number} times."
+  end
+
+ def flip(direction)
+    "Gymnast does a #{direction}-flip."
+  end
+
+ def cartwheel
+    "Gymnast does a cartwheel."
+  end
+end
+
+
+gymnasts = [] # array to store gymnasts
+
+5.times {gymnasts.push(Gymnast.new)}
+
+gymnasts.each do |gymnast|
+  puts gymnast.flip("front")
+  puts gymnast.jump(4)
+  puts gymnast.cartwheel
+end
