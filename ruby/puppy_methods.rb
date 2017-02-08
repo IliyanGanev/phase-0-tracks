@@ -60,7 +60,7 @@ end
 
 gymnasts = [] # array to store gymnasts
 
-5.times {gymnasts.push(Gymnast.new)}
+50.times {gymnasts << Gymnast.new}
 
 gymnasts.each do |gymnast|
   puts gymnast.flip("front")
