@@ -69,4 +69,10 @@ p santa.reindeer_ranking
 #Create a large number of santas with randomly selected attributes.
 #Print out santas attributes.
 
+rand_gender = example_genders.sample
+p rand_gender
+rand_ethnicity =example_ethnicities.sample
+p rand_ethnicity
+rand_age = rand(140)
+p rand_age
 
