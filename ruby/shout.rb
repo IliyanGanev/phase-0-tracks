@@ -20,18 +20,28 @@ module Shout
 	end
 
 	def yell_happily(words)
-		words + ":-)"
+		words + " :-)"
 	end
 end
 
 
-class Person
+class Comedian
 	include Shout
 end
 
 class Singer
 	include Shout
 end
+
+comedian = Comedian.new
+p comedian.yell_angrily("Daaaamn")
+p comedian.yell_happily("Yaaaaay")
+
+singer = Singer.new
+p singer.yell_angrily("Ooooo nooo")
+p singer.yell_happily("Yeees")
+
+
 
 
 
