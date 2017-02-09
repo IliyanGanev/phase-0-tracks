@@ -9,7 +9,7 @@ class Santa
 		@ethnicity = ethnicity
 		@age = 0
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		age = 0
+		
 	
 	end
 
@@ -70,28 +70,29 @@ end
 #Print out santas attributes.
 
 
- def rand_gender
-   example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+def rand_gender
+	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
     gender = example_genders.sample
-  end
+end
   
-  def rand_ethnicity
+def rand_ethnicity 
     example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature(unicorn)", "N/A"]
     ethnicity = example_ethnicities.sample
-  end
+end
 
- def rand_age
+def rand_age
     rand(140)
-  end
+end
 
     
 
 puts "Hi, how many santas do you want to generate?"
 answer = gets.chomp.to_i
 
-answer.times do
-new_santa = Santa.new(rand_gender, rand_ethnicity, rand_age)
-puts "Hi I am the new #{new_santa.gender} ,#{new_santa.ethnicity} santa and I am #{rand_age} years old"
+answer.times do |santa_num|
+new_santa = Santa.new(rand_gender, rand_ethnicity, rand_age) 
+puts "Santa number #{santa_num+1} says:"
+puts "Hi I am the new #{new_santa.gender} ,#{new_santa.ethnicity} santa and I am #{rand_age} years old."
 new_santa.speak 
 end
 
