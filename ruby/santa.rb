@@ -1,6 +1,6 @@
 class Santa
 
-	attr_reader :age, :ethnicity
+	attr_reader   :ethnicity
 	attr_accessor :gender, :reindeer_ranking, :age
 	
 	def initialize(gender, ethnicity, age)
@@ -23,6 +23,8 @@ class Santa
 		puts "That was a good #{type}"
 	end
 
+#Setter and getter methods
+
 	def celebrate_birthday
 		@age += 1
 	end
@@ -33,6 +35,13 @@ class Santa
 		"Sorry #{reindeer_name} but your ranking dropped."
 	end
 
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 
 end
 
