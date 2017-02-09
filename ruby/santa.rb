@@ -1,10 +1,10 @@
 class Santa
 
 	attr_reader :age, :ethnicity
-	attr_accessor :gender, :reindeer_ranking
+	attr_accessor :gender, :reindeer_ranking, :age
 	
-	def initialize(gender, ethnicity)
-		puts "Initializing Santa instance..."
+	def initialize(gender, ethnicity, age)
+		puts "..............................."
 		@gender = gender
 		@ethnicity = ethnicity
 		@age = 0
@@ -15,7 +15,7 @@ class Santa
 
 	def speak 
 		puts "Ho, ho, ho!Haaaappy holidays!"
-		p "Said the #{@ethnicity} #{@gender} santa."
+		puts "Said the #{@ethnicity} #{@gender} santa."
 
 	end
 
@@ -65,6 +65,7 @@ end
 
 #Create a method with randomly selected genders
 #Create a method for randomly selected ethnicities.
+#create a method for random number of santa years.
 #Create a large number of santas with randomly selected attributes.
 #Print out santas attributes.
 
@@ -79,11 +80,19 @@ end
     ethnicity = example_ethnicities.sample
   end
 
+ def rand_age
+    rand(140)
+  end
 
-10.times do
-  new_santa = Santa.new(rand_gender, rand_ethnicity)
-  puts "#{new_santa.gender}  #{new_santa.ethnicity}"
-  
+    
+
+puts "Hi, how many santas do you want to generate?"
+answer = gets.chomp.to_i
+
+answer.times do
+new_santa = Santa.new(rand_gender, rand_ethnicity, rand_age)
+puts "Hi I am the new #{new_santa.gender} ,#{new_santa.ethnicity} santa and I am #{rand_age} years old"
+new_santa.speak 
 end
 
 
