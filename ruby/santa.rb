@@ -14,7 +14,7 @@ class Santa
 	end
 
 	def speak 
-		puts "Ho, ho, ho!Haaaappy holidays!"
+		puts "Ho, ho, ho! Haaaappy holidays!"
 		puts "Said the #{@ethnicity} #{@gender} santa."
 
 	end
@@ -22,9 +22,10 @@ class Santa
 	def eat_milk_and_cookies(type)
 		puts "That was a good #{type}"
 	end
+end
 
-#Setter and getter methods
-
+#Old setter and getter methods
+=begin
 	def celebrate_birthday
 		@age += 1
 	end
@@ -43,8 +44,8 @@ class Santa
 		@ethnicity
 	end
 
-end
 
+=end
 
 
 #santas = []
@@ -99,10 +100,10 @@ puts "Hi, how many santas do you want to generate?"
 answer = gets.chomp.to_i
 
 answer.times do |santa_num|
-new_santa = Santa.new(rand_gender, rand_ethnicity, rand_age) 
-puts "Santa number #{santa_num+1} says:"
-puts "Hi I am the new #{new_santa.gender} ,#{new_santa.ethnicity} santa and I am #{rand_age} years old."
-new_santa.speak 
+	new_santa = Santa.new(rand_gender, rand_ethnicity, rand_age) 
+	puts "Santa number #{santa_num + 1} says:"
+	puts "Hi I am the new #{new_santa.gender} ,#{new_santa.ethnicity} santa and I am #{rand_age} years old."
+	new_santa.speak 
 end
 
 
