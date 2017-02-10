@@ -48,7 +48,7 @@ end
 # Method to print a list and make it look pretty
 # input:grocery list
 # steps: iterate through the list
-# output:
+# output: print a better looking list
 
 def print_items(grocery_list)
   grocery_list.each do |item ,quantity|
@@ -59,7 +59,25 @@ end
 #Driver code
 
 grocery_list = make_list("carrots apples cereal pizza")
-grocery_list = add_item(grocery_list, "pear")
-rocery_list = delete_item(grocery_list, "apples")
-grocery_list = update_items(grocery_list,"tomatoes",9)
+grocery_list = add_item(grocery_list, "Lemonade", 2)
+grocery_list = add_item(grocery_list, "Tomatoes", 3)
+grocery_list = add_item(grocery_list, "Onions", 3)
+grocery_list = add_item(grocery_list, "Ice Cream", 4)
+grocery_list = delete_item(grocery_list, "Lemonade")
+grocery_list = update_items(grocery_list,"Ice Cream", 1)
 print_items(grocery_list)
+
+=begin
+What did you learn about pseudocode from working on this challenge?
+It helps to create all the steps necesary for the program to run the way we want it to.
+What are the tradeoffs of using arrays and hashes for this challenge?
+It is better to use hash key value pairs.
+What does a method return?
+It returns the last value evaluated unless the value is explicitly returned earlier.
+What kind of things can you pass into methods as arguments?
+Arrays, hashes, integers, strings.
+How can you pass information between methods?
+Save the information in a data structure and pass it as an argument.
+What concepts were solidified in this challenge, and what concepts are still confusing?
+Using blocks inside other methods. All curent concepts are clear.
+=end
