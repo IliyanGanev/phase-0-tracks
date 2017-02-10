@@ -89,8 +89,8 @@ answer.times do |santa_num|
 santa = Santa.new(example_genders.sample, example_ethnicities.sample)
 santa.age = rand(140)
 p "Santa number #{santa_num+1} was created"
- santa.speak
- p"----------------------------"
+santa.speak
+p"----------------------------"
 end
   
   
