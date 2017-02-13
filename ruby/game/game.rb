@@ -23,6 +23,13 @@ class Game
     @count+=1
     end
   end
+
+ def output(letter)
+    letter_index = @word.index(letter)
+    @secret_letters[letter_index] = letter
+    @secret_letters
+  end
+
   
  
   
@@ -36,3 +43,4 @@ p game.letter_match_array("k")
 p game.guessed_letters
 p game.count
 p game.correct_letters 
+p game.output("w")
