@@ -2,7 +2,7 @@ require_relative "game"
 
 #Driver code
 
-puts "Enter an word! Your guesses are limited to twice the word length."
+puts "Enter a word! Your guesses are limited to twice the word length."
 input1 = gets.chomp
 game = Game.new (input1)
 
@@ -14,9 +14,9 @@ loop do
 	p "Wrong answer" if !input_was_found
 	p game.found_letters
 	if game.found_letters == game.correct_letters
-		p "You win!!!"
+	p "You win!!!"
     break
-  elsif game.count == input1.length * 2
+  	elsif game.count == input1.length * 2
     p "You loose!!!"
     break
   end

@@ -13,15 +13,14 @@ class Game
 
 	
 	def augment_found_array(letter)
-		@count += 1
+  		@count += 1
 		if @correct_letters.include?(letter)
 			letter_index = @word.index(letter)
 			@found_letters[letter_index] = letter
 			true
-    else
-    	false
-			
-    end
-  end 
+    	else
+    		false
+		end
+  	end 
 end
 
