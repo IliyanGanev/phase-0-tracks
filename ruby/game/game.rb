@@ -19,22 +19,29 @@ class Game
 			 @secret_letters[letter_index] = letter
 			 p @secret_letters
     	else
-    		@count+=1
-    		 p "Wrong answer"
+    	 @count+=1
+    	 p "Wrong answer"
     	end
-  	end  
- 
-  
+  	end   
 end
 
 
- puts "Enter an item "
-  input1 = gets.chomp
-  game = Game.new (input1)
+#Driver code
+
+puts "Enter an word! "
+input1 = gets.chomp
+game = Game.new (input1)
 
 loop do
-  puts "Try to guess the letter!"
+	puts "Try to guess the letter!"
+  p game.secret_letters
   input2 = gets.chomp
-  break if input2 == "exit"
   game.letter_match_array(input2)
+  if game.secret_letters == game.correct_letters
+    p "You win!!!"
+    break
+  	elsif game.count == input1.length*2
+    p "You loose!!!"
+    break
+  end
 end
