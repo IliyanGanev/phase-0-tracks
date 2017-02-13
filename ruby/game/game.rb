@@ -17,11 +17,12 @@ class Game
 		if @correct_letters.include?(letter)
 			 letter_index = @word.index(letter)
 			 @secret_letters[letter_index] = letter
-			 @secret_letters
+			 p @secret_letters
     	else
     		@count+=1
+    		 p "Wrong answer"
     	end
-  	end 
+  	end  
  
   
 end
@@ -29,6 +30,10 @@ end
 
 game = Game.new ("work")
 
-p game.letter_match_array("w")
-p game.letter_match_array("r")
-p game.letter_match_array("k")
+
+loop do
+  puts "Enter a letter (or type 'exit'):"
+  input = gets.chomp
+  break if input == "exit"
+ game.letter_match_array(input)
+end
