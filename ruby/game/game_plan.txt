@@ -1,0 +1,13 @@
+Create a Game class 
+Define initialize method that takes a word as an argument.
+Declare instance variables(word, correct_letters, found_letters, and count)
+found_letters array will be used to store matching letters
+Use accessor for the attributes.
+
+Define a method that takes the guessed letter as an argument.
+Use counter to keep track of guesses.
+Check if the letter maches a letter from the word. If so add it to the proper place in inside find_letters array and return true. Else return false.
+
+The driver code will ask the first player to enter a word.
+After that puts a message for the second player to guess a word.
+The second player will have twice the word length opportunities to enter a letter.
