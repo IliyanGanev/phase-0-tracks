@@ -28,12 +28,13 @@ class Game
 end
 
 
-game = Game.new ("work")
-
+ puts "Enter an item "
+  input1 = gets.chomp
+  game = Game.new (input1)
 
 loop do
-  puts "Enter a letter (or type 'exit'):"
-  input = gets.chomp
-  break if input == "exit"
- game.letter_match_array(input)
+  puts "Try to guess the letter!"
+  input2 = gets.chomp
+  break if input2 == "exit"
+  game.letter_match_array(input2)
 end
