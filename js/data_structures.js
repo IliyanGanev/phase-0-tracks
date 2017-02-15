@@ -10,3 +10,9 @@ console.log(colors);
 names.push("Shawn");
 console.log(names);
 
+function Car(color, make, type) {
+this.color = color;
+this.make = make;
+this.type = type;
+
+}
