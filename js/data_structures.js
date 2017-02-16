@@ -42,6 +42,18 @@ for (var key in mazda) {
   }
 }
 
+
+for (var key in mazda) {
+    console.log(key + " -> " + mazda[key]);
+  }
+
+
+for (var key in subaru) {
+    console.log(this.key + " -> " + this.subaru[key]);
+  }
+
+
+
 //The advantage of constructor functions is that we can create
 // multiple instances of the object. Literal notation is better,
 // if we want to use the object as a simple data container for key value pairs.
