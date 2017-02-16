@@ -15,7 +15,7 @@ function reverse (string) {
 	if (reversedString.length >= 15 ) {
 		console.log("Try something shorter!");
 	} else if (reversedString === string ) {
-		console.log("The word is a palindrome!");
+		console.log("The word is a palindrome! No need to reverse.");
 	} else {
 		console.log(reversedString);
 	}	
@@ -24,9 +24,8 @@ function reverse (string) {
 
 //Driver code:
 reverse("work");
-reverse("work");
 reverse("kayak");
-reverse("veryvaryloppppppppppp");
+reverse("veryveryloooongword");
 
 
 
