@@ -5,13 +5,16 @@
 //Add conditional logic that prints the variable if condition evaluates to true.
 
 
+var reversedString = "";
+
 function reverse(parameter) {
-
-for (i = parameter.length; i >=0; i-- ) {
-      console.log(str[i]);
+	for (i = parameter.length - 1; i >= 0; i -- ) {
+		eversedString += parameter[i];
+      
+	}
+	return reversedString;
 }
 
-}
 
-var str = "string"
-reverse(str)
+reverse("string");
+console.log(reversedString);
