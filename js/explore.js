@@ -3,3 +3,15 @@
 //Add driver code to that calls the function with string parameter that has to be reversed.
 //Store the result in a new variable.
 //Add conditional logic that prints the variable if condition evaluates to true.
+
+
+function reverse(parameter) {
+
+for (i = parameter.length; i >=0; i-- ) {
+      console.log(str[i]);
+}
+
+}
+
+var str = "string"
+reverse(str)
