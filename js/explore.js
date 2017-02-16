@@ -5,16 +5,28 @@
 //Add conditional logic that prints the variable if condition evaluates to true.
 
 
-var reversedString = "";
 
-function reverse(parameter) {
-	for (i = parameter.length - 1; i >= 0; i -- ) {
-		eversedString += parameter[i];
-      
+
+function reverse (string) {
+	var reversedString = "";
+	for (i = string.length - 1; i >= 0; i -- ) {
+		reversedString += string[i];  
 	}
-	return reversedString;
+	if (reversedString.length >= 15 ) {
+		console.log("Try something shorter!");
+	} else if (reversedString === string ) {
+		console.log("The word is a palindrome!");
+	} else {
+		console.log(reversedString);
+	}	
 }
 
 
-reverse("string");
-console.log(reversedString);
+//Driver code:
+reverse("work");
+reverse("work");
+reverse("kayak");
+reverse("veryvaryloppppppppppp");
+
+
+
