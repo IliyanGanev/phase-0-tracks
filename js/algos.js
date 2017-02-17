@@ -11,10 +11,10 @@ function longestWord(words)	{
 	var longest = words[0];
 	for (i = 0; i < words.length; i ++) {
 		if (words[i].length > longest.length) {
-			var longest = words[i];
+			longest = words[i];
 		}	
 	}
-	return(longest);
+	return longest;
 }
 
 var random = ["Long phrase", "Loooooongest phrase", "Not the longest"];
