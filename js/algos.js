@@ -8,15 +8,14 @@
 
 
 function longestWord(words)	{
-	var long = words[0];
-	
+	var longest = words[0];
 	for (i = 0; i < words.length; i ++) {
-		if (words[i].length > words[0].length) {
-			var long = words[i];
+		if (words[i].length > longest.length) {
+			var longest = words[i];
 		}	
 	}
-	return(long);
+	return(longest);
 }
 
-var random = ["a", "bcde", "longerphrase"];
+var random = ["Long phrase", "Loooooongest phrase", "Not the longest"];
 console.log(longestWord(random));
