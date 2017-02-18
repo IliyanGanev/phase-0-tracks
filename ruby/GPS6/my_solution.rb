@@ -1,10 +1,10 @@
  #Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Leonard Dain].
+# We spent [1] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# Requre relative tells the file to refer to another file within the same directory if no path is specified.
 #
 require_relative 'state_data'
 
@@ -15,15 +15,18 @@ class VirusPredictor
     @population = population
     @population_density = population_density
   end
-
+ 
 #Calls predicted_deaths and speed_of_spread methods.
   def virus_effects
-    predicted_deaths
-    speed_of_spread
+    puts "#{@state} will lose #{predicted_deaths} people in this outbreak puts and will spread across the state in #{speed_of_spread} months."
   end
 
   private
+  #private limits the scope of the methods beneath to be accessible within the class only. 
+  #if we move it above virus effects ,the method becomes unaccessible outside the class.
+
 #This method calculates predicted deaths based on population and population density.
+
   def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -36,11 +39,10 @@ class VirusPredictor
       number_of_deaths = (@population * 0.1).floor
     else
       number_of_deaths = (@population * 0.05).floor
-    end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+    end 
 
   end
+ 
 #Calculates speed of spread based on population density.
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
@@ -58,8 +60,6 @@ class VirusPredictor
     else
       speed += 2.5
     end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
 
   end
 
@@ -93,3 +93,15 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+#One uses a strings as  keys. The other symbols as keys.The difference is that symbols are immutable(They cannot be changed after assignment)
+
+#What are some ways to iterate through a hash?
+#One way is to use each. Another way is to use map if we want to madify some values.
+
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+#What stood out is that instance variables are available within the class.
+
+#What concept did you most solidify in this challenge?
+#I solidified the concepts of scope of instance variables and private methods as well as when require and require_relative are used. 
