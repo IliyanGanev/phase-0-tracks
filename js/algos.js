@@ -19,3 +19,10 @@ function longestWord(words)	{
 
 var random = ["Long phrase", "Loooooongest phrase", "Not the longest"];
 console.log(longestWord(random));
+
+
+
+//Release 1
+//Write a function that takes two hashes as arguments.
+//Within that function write two for loops that iterate through each of the hashes keys and values.
+//If there is a match for both keys && values return true. Else false.
