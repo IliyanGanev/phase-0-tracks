@@ -47,3 +47,11 @@ function objectMatch(objectA, objectB) {
 var objectA = {name: "Steven", age: 54}
 var objectB = {name: "Steven", age: 59}
 console.log(objectMatch(objectA, objectB));
+
+
+//Release2
+//Write a function that takes an integer as argument and generates as many random words as the argument.(words length must be between 1 and 10).
+//Write driver code that does the following 10 times.Generates and prints an array, feeds the array in the longest word function and prints the result.
+
+
+
