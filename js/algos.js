@@ -51,6 +51,10 @@ console.log(objectMatch(objectA, objectB));
 
 //Release2
 //Write a function that takes an integer as argument and generates as many random words as the argument.(words length must be between 1 and 10).
+//Write a for loop that iterates number of words times.
+//Write another loop that adds random letters to an empty string forming a word.
+//Add the words to an empty array.
+//Return the array.
 //Write driver code that does the following 10 times.Generates and prints an array, feeds the array in the longest word function and prints the result.
 
 function randomWords(integer) {
@@ -62,6 +66,6 @@ function randomWords(integer) {
 	}
 	return word;
 }
-console.log(randomWords(3))
+console.log(randomWords(13))
 
 
