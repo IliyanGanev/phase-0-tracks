@@ -34,7 +34,7 @@ console.log(longestWord(random));
 
 
 var objectA = {name: "Steven", age: 54}
-var objectB = {name: "Tamir", age: 54}
+var objectB = {name: "Tamir", age: 53}
 
 
 function objectMatch(objectA, objectB) {
@@ -45,4 +45,8 @@ function objectMatch(objectA, objectB) {
 			}
 		}
 	}
+	return false;
 }
+
+
+console.log(objectMatch(objectA, objectB));
