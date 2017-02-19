@@ -27,26 +27,23 @@ console.log(longestWord(random));
 //Release 1
 //Write a function that takes two hashes as arguments.
 //Within that function write two for loops that iterate through each of the hashes keys and values.
-//If there is a match for both keys and values return true. Else false.
+//If there is a match for both keys and values return true. If there is no match the function will return false.
 //Add driver code.
-
-
-
-
-var objectA = {name: "Steven", age: 54}
-var objectB = {name: "Tamir", age: 53}
 
 
 function objectMatch(objectA, objectB) {
 	for (var key in objectA) {
 		for (var key2 in objectB){
-			if (key === key2 && key[objectA] === key2[objectB]){
+			if (key === key2 && objectA[key] === objectB[key2]) {
 				return true;
-			}
+			} 			
 		}
 	}
 	return false;
 }
 
 
+
+var objectA = {name: "Steven", age: 54}
+var objectB = {name: "Steven", age: 59}
 console.log(objectMatch(objectA, objectB));
