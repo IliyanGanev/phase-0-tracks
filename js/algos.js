@@ -19,8 +19,8 @@ function longestWord(words)	{
 	return longest;
 }
 
-var random = ["Long phrase", "Loooooongest phrase", "Not the longest"];
-console.log(longestWord(random));
+//var random = ["Long phrase", "Loooooongest phrase", "Not the longest"];
+//console.log(longestWord(random));
 
 
 
@@ -44,9 +44,9 @@ function objectMatch(objectA, objectB) {
 
 
 
-var objectA = {name: "Steven", age: 54}
-var objectB = {name: "Steven", age: 59}
-console.log(objectMatch(objectA, objectB));
+//var objectA = {name: "Steven", age: 54}
+//var objectB = {name: "Steven", age: 59}
+//console.log(objectMatch(objectA, objectB));
 
 
 //Release2
@@ -55,7 +55,9 @@ console.log(objectMatch(objectA, objectB));
 //Write another nested loop that adds random letters to an empty string forming a word.
 //Add the words to an empty array.
 //Return the array.
+//Release 2.1
 //Write driver code that does the following 10 times.Generates and prints an array, feeds the array in the longest word function and prints the result.
+
 
 function randomWords(numOfWords) {
 	var wordsArr = [];
@@ -70,6 +72,12 @@ function randomWords(numOfWords) {
 	}
 	return wordsArr;
 }
-console.log(randomWords(2));
+//console.log(randomWords(2));
+
+
+	for (j = 0; j < 10; j ++) {
+		console.log(randomWords(5));
+
+	}
 
 
