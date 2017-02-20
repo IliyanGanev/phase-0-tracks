@@ -57,11 +57,11 @@ console.log(objectMatch(objectA, objectB));
 //Return the array.
 //Write driver code that does the following 10 times.Generates and prints an array, feeds the array in the longest word function and prints the result.
 
-function randomWords(integer) {
+function randomWords(numOfWords) {
 	var word = "";
 	var alphabet ="abcdefghijklmnopqrstuvwxyz";
 
-	for ( i = 0; i<integer; i++) {
+	for ( i = 0; i < Math.floor(Math.random() * 10); i++ ) {
 		word += (alphabet[Math.floor(Math.random() * 25)]);
 	}
 	return word;
