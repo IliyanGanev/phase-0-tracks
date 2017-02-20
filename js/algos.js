@@ -19,6 +19,7 @@ function longestWord(words)	{
 	return longest;
 }
 
+//Driver code
 //var random = ["Long phrase", "Loooooongest phrase", "Not the longest"];
 //console.log(longestWord(random));
 
@@ -43,7 +44,7 @@ function objectMatch(objectA, objectB) {
 }
 
 
-
+//Driver code
 //var objectA = {name: "Steven", age: 54}
 //var objectB = {name: "Steven", age: 59}
 //console.log(objectMatch(objectA, objectB));
@@ -72,12 +73,17 @@ function randomWords(numOfWords) {
 	}
 	return wordsArr;
 }
+
+
+//Driver code.
 //console.log(randomWords(2));
 
-
-	for (j = 0; j < 10; j ++) {
-		console.log(randomWords(5));
-
+	function print(times) {
+		for (j = 0; j < times; j ++) {
+ 			result = randomWords(5);
+			console.log(result);
+			console.log(longestWord(result));
+		}
 	}
 
-
+print(10);
