@@ -47,7 +47,6 @@ class VirusPredictor
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
 
     if @population_density >= 200
       speed += 0.5
@@ -95,13 +94,13 @@ end
 # Reflection Section
 
 #What are the differences between the two different hash syntaxes shown in the state_data file?
-#One uses a strings as  keys. The other symbols as keys.The difference is that symbols are immutable(They cannot be changed after assignment)
+#One uses strings as keys. The other symbols as keys.The difference is that symbols possess immutability and uniqueness.
 
 #What are some ways to iterate through a hash?
-#One way is to use each. Another way is to use map if we want to madify some values.
+#One way is to use each. Another way is to use map if we want to modify some values.
 
 #When refactoring virus_effects, what stood out to you about the variables, if anything?
-#What stood out is that instance variables are available within the class.
+#What stood out is that instance variables are available anywhere within the class.
 
 #What concept did you most solidify in this challenge?
 #I solidified the concepts of scope of instance variables and private methods as well as when require and require_relative are used. 
