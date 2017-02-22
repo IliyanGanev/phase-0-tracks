@@ -1,0 +1,99 @@
+Release 2:
+
+1.Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM snowboarders;
+1|Shawn White|29|US|1|true|1
+2|Gigi Ruf|26|Switzerland|2|true|2
+3|Tyler Chorlton|30|Great Britain|3|false|3
+4|Danny Davis|26|US|4|true|1
+5|Kevin Valaika|24|US|5|true|1
+6|Nicolas Muller|38|US|6|false|2
+sqlite> 
+
+2.Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE snowboarders SET country="Italy" WHERE age=38;
+sqlite> SELECT * FROM snowboarders;
+1|Shawn White|29|US|1|true|1
+2|Gigi Ruf|26|Switzerland|2|true|2
+3|Tyler Chorlton|30|Great Britain|3|false|3
+4|Danny Davis|26|US|4|true|1
+5|Kevin Valaika|24|US|5|true|1
+6|Nicolas Muller|38|Italy|6|false|2
+sqlite> 
+
+3.Display the information in both tables using one query.
+
+sqlite> SELECT * FROM snowboarders, companies WHERE snowboarders.company_id = companies.id;
+1|Shawn White|29|US|1|true|1|1|Burton|US|true|200
+2|Gigi Ruf|26|Switzerland|2|true|2|2|Nitro|Austria|false|100
+3|Tyler Chorlton|30|Great Britain|3|false|3|3|Bataleon|Holland|false|50
+4|Danny Davis|26|US|4|true|1|1|Burton|US|true|200
+5|Kevin Valaika|24|US|5|true|1|1|Burton|US|true|200
+6|Nicolas Muller|38|Italy|6|false|2|2|Nitro|Austria|false|100
+sqlite> 
+
+4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT snowboarders.name, snowboarders.country, companies.name, companies.country FROM snowboarders JOIN companies ON snowboarders.company_id = companies.id;
+Shawn White|US|Burton|US
+Gigi Ruf|Switzerland|Nitro|Austria
+Tyler Chorlton|Great Britain|Bataleon|Holland
+Danny Davis|US|Burton|US
+Kevin Valaika|US|Burton|US
+Nicolas Muller|Italy|Nitro|Austria
+sqlite> 
+
+5.Delete an item that meets some condition (you can choose a condition that makes sense)
+
+sqlite> DELETE FROM snowboarders WHERE name = "Nicolas Muller";
+sqlite> SELECT * FROM snowboarders;
+1|Shawn White|29|US|1|true|1
+2|Gigi Ruf|26|Switzerland|2|true|2
+3|Tyler Chorlton|30|Great Britain|3|false|3
+4|Danny Davis|26|US|4|true|1
+5|Kevin Valaika|24|US|5|true|1
+sqlite> 
+
+Release 3:
+
+There are inner, left, right and full joins. We can apply different conditions to change what is displayed with HAVING, GROUP BY, BETWEEN or ORDER BY and WHERE(like the examples below).
+
+INNER JOIN (The same as JOIN)
+
+sqlite> SELECT snowboarders.name, companies.name FROM snowboarders INNER JOIN companies ON snowboarders.company_id = companies.id ORDER BY snowboarders.name;
+Danny Davis|Burton
+Gigi Ruf|Nitro
+Kevin Valaika|Burton
+Shawn White|Burton
+Tyler Chorlton|Bataleon
+sqlite> 
+
+sqlite> SELECT snowboarders.name, companies.name FROM snowboarders INNER JOIN companies ON snowboarders.company_id = companies.id WHERE companies.name="Burton"; 
+Shawn White|Burton
+Danny Davis|Burton
+Kevin Valaika|Burton
+sqlite> 
+
+LEFT JOIN
+
+sqlite> SELECT snowboarders.name, snowboarders.sponsored, companies.name FROM snowboarders LEFT JOIN companies ON snowboarders.company_id=companies.id;
+Shawn White|true|Burton
+Gigi Ruf|true|Nitro
+Tyler Chorlton|false|Bataleon
+Danny Davis|true|Burton
+Kevin Valaika|true|Burton
+sqlite> 
+
+RIGHT JOIN
+
+sqlite> SELECT snowboarders.name, companies.name FROM snowboarders RIGHT JOIN companies ON snowboarders.company_id=companies.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> 
+
+FULL JOIN
+
+sqlite> SELECT snowboarders.name, companies.name FROM snowboarders FULL OUTER JOIN companies ON snowboarders.company.id=companies.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> 
