@@ -36,6 +36,14 @@ sqlite>
 
 4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
 
+sqlite> SELECT snowboarders.name, companies.name FROM snowboarders, companies WHERE snowboarders.company_id = companies.id;
+Shawn White|Burton
+Gigi Ruf|Nitro
+Tyler Chorlton|Bataleon
+Danny Davis|Burton
+Kevin Valaika|Burton
+sqlite>
+
 sqlite> SELECT snowboarders.name, snowboarders.country, companies.name, companies.country FROM snowboarders JOIN companies ON snowboarders.company_id = companies.id;
 Shawn White|US|Burton|US
 Gigi Ruf|Switzerland|Nitro|Austria
