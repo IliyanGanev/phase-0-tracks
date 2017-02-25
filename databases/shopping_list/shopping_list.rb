@@ -12,3 +12,9 @@ quantity INT
 SQL
 
 db.execute(create_table)
+
+def add_item(db, name, quantity)
+	db.execute("INSERT INTO items (name, quantity) VALUES (?, ?)", [name, quantity])
+end
+
+add_item(db, "shirt", 1)	
