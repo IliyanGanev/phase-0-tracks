@@ -55,11 +55,15 @@ loop do
 	answer = gets.chomp
 	case answer
 	when 'a'
-		puts "Type an item to add!"
-		item = gets.chomp
-		puts "Type ammount"
-		ammount = gets.chomp
-		add_item(db, item, ammount)
+		loop do
+			puts "Type an item to add! Type 'done' when done adding items!"
+			item = gets.chomp
+			break if item == 'done'
+			puts "Type ammount"
+			ammount = gets.chomp
+			break if item == 'done'
+			add_item(db, item, ammount)
+		end
 	when "d"
 		puts "Type the number of the item you want to delete!"
 		id = gets.chomp
@@ -72,6 +76,8 @@ loop do
 		puts "Type the quantity!"
 		quantity = gets.chomp
 		update_item(db, item, quantity, id)
+	when "c"
+		clear_table(db)
 	when "q"
 		exit	
 	end
