@@ -13,12 +13,13 @@ SQL
 
 db.execute(create_table)
 
+items = db.execute("SELECT * FROM items")
 
 def add_item(db, name, quantity)
 	db.execute("INSERT INTO items (name, quantity) VALUES (?, ?)", [name, quantity])
 end
 
-add_item(db, "shoes", 2)
+#add_item(db, "shoes", 2)
 
 def update_item(db, name, quantity, id)
 	db.execute("UPDATE items SET name=?, quantity=? WHERE id=?", [name, quantity, id])
@@ -37,4 +38,18 @@ def clear_table(db)
 end
 
 #clear_table(db)
+
+def print_items(items)
+	items.each do |item|
+		puts "item#{item["id"]}: |#{item["name"]}| quantity:#{item["quantity"]}"
+	end	
+end
+
+print_items(items)
+
+
+
+
+
+
 
