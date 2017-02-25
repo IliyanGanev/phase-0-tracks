@@ -27,8 +27,8 @@ end
 
 #update_item(db, "tie", 1, 1)
 
-def delete_item(db, name)
-	db.execute("DELETE FROM items WHERE name=?", [name])
+def delete_item(db, id)
+	db.execute("DELETE FROM items WHERE id=?", [id])
 end
 
 #delete_item(db, "tie")
@@ -40,12 +40,45 @@ end
 #clear_table(db)
 
 def print_items(items)
+	puts "======SHOPPING LIST======"
 	items.each do |item|
 		puts "item#{item["id"]}: |#{item["name"]}| quantity:#{item["quantity"]}"
 	end	
+
+	puts "========================="
+	
+end
+	print_items(items)
+
+loop do
+	puts "Type 'a' to add item,'u' to update, 'd' to delete item and 'c' to clear table. Type 'q' to quit."
+	answer = gets.chomp
+	case answer
+	when 'a'
+		puts "Type an item to add!"
+		item = gets.chomp
+		puts "Type ammount"
+		ammount = gets.chomp
+		add_item(db, item, ammount)
+	when "d"
+		puts "Type the number of the item you want to delete!"
+		id = gets.chomp
+		delete_item(db, id) 
+	when "u"
+		puts "Type the number of the item you want to update!"
+		id = gets.chomp
+		puts "Type the name of the new item!"
+		item = gets.chomp
+		puts "Type the quantity!"
+		quantity = gets.chomp
+		update_item(db, item, quantity, id)
+	when "q"
+		exit	
+	end
+
 end
 
-print_items(items)
+
 
 
 
