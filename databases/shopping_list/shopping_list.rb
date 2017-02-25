@@ -13,8 +13,15 @@ SQL
 
 db.execute(create_table)
 
+
 def add_item(db, name, quantity)
 	db.execute("INSERT INTO items (name, quantity) VALUES (?, ?)", [name, quantity])
 end
 
-add_item(db, "shirt", 1)	
+#add_item(db, "shoes", 2)
+
+def update_item(db, name, quantity, id)
+	db.execute("UPDATE items SET name=?, quantity=? WHERE id=?", [name, quantity, id])
+end
+
+update_item(db, "tie", 1, 1)
