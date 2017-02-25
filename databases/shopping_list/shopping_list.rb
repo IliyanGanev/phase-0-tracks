@@ -13,7 +13,7 @@ SQL
 
 db.execute(create_table)
 
-items = db.execute("SELECT * FROM items")
+
 
 def add_item(db, name, quantity)
 	db.execute("INSERT INTO items (name, quantity) VALUES (?, ?)", [name, quantity])
@@ -39,7 +39,10 @@ end
 
 #clear_table(db)
 
-def print_items(items)
+items = db.execute("SELECT * FROM items")
+
+def print_items(db, items)
+	items = db.execute("SELECT * FROM items")
 	puts "======SHOPPING LIST======"
 	items.each do |item|
 		puts "item#{item["id"]}: |#{item["name"]}| quantity:#{item["quantity"]}"
@@ -48,7 +51,7 @@ def print_items(items)
 	puts "========================="
 	
 end
-	print_items(items)
+	print_items(db, items)
 
 loop do
 	puts "Type 'a' to add item,'u' to update, 'd' to delete item and 'c' to clear table. Type 'q' to quit."
@@ -61,9 +64,10 @@ loop do
 			break if item == 'done'
 			puts "Type ammount"
 			ammount = gets.chomp
-			break if item == 'done'
+			break if ammount == 'done'
 			add_item(db, item, ammount)
 		end
+		print_items(db, items)
 	when "d"
 		puts "Type the number of the item you want to delete!"
 		id = gets.chomp
@@ -79,6 +83,7 @@ loop do
 	when "c"
 		clear_table(db)
 	when "q"
+		print_items(db, items)
 		exit	
 	end
 
