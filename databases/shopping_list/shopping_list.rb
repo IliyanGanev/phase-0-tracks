@@ -24,4 +24,10 @@ def update_item(db, name, quantity, id)
 	db.execute("UPDATE items SET name=?, quantity=? WHERE id=?", [name, quantity, id])
 end
 
-update_item(db, "tie", 1, 1)
+#update_item(db, "tie", 1, 1)
+
+def delete_item(db, name)
+	db.execute("DELETE FROM items WHERE name=?", [name])
+end
+
+delete_item(db, "tie")
