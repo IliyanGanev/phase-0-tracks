@@ -38,7 +38,7 @@ def clear_table(db)
 end
 
 
-items = db.execute("SELECT * FROM items")
+
 
 def print_items(db, items)
 	items = db.execute("SELECT * FROM items")
@@ -50,7 +50,23 @@ def print_items(db, items)
 	puts "\n==============================="
 	
 end
-	print_items(db, items)
+	
+
+
+
+	def print_updated_item(db, items, id)
+		i = db.execute("SELECT * FROM items WHERE id=?", [id])
+		i.each do |item|
+			puts "Item:#{item['id']} was updated to #{item['name']} quantity:#{item["quantity"]}."
+		end
+		
+	end
+
+
+
+
+items = db.execute("SELECT * FROM items")
+print_items(db, items)
 
 loop do
 	puts "\nType 'a' to add item,'u' to update, 'd' to delete item and 'c' to clear table." 
@@ -82,6 +98,7 @@ loop do
 		puts "Type the quantity!"
 		quantity = gets.chomp
 		update_item(db, item, quantity, id)
+		print_updated_item(db, items, id)
 	when "c"
 		clear_table(db)
 	when "q"
