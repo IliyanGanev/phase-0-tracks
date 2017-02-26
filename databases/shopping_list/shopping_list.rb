@@ -13,31 +13,21 @@ SQL
 
 db.execute(create_table)
 
-#add_item(db, "shoes", 2)
-
 def add_item(db, name, quantity)
 	db.execute("INSERT INTO items (name, quantity) VALUES (?, ?)", [name, quantity])
 end
-
-#update_item(db, "tie", 1, 1)
 
 def update_item(db, name, quantity, id)
 	db.execute("UPDATE items SET name=?, quantity=? WHERE id=?", [name, quantity, id])
 end
 
-#delete_item(db, "tie")
-
 def delete_item(db, id)
 	db.execute("DELETE FROM items WHERE id=?", [id])
 end
 
-#clear_table(db)
-
 def clear_table(db)
 	db.execute("DELETE FROM items")
 end
-
-#print
 
 def print_items(db)
 	items = db.execute("SELECT * FROM items")
@@ -49,16 +39,13 @@ def print_items(db)
 end
 
 #print list on startup
-
-#items = db.execute("SELECT * FROM items")
 print_items(db)
 
 loop do
-	#puts "\nType 'a' to ADD item, 'u' to UPDATE, 'd' to DELETE item or 'c' to CLEAR the list" 
 	puts "\n SHOPPING LIST MENU"
 	puts "------------------------------------------------------------------"
-	puts "ADD ITEM:type - a   | UPDATE ITEM:type - u | DELETE ITEM:type - d |"
-	puts "PRINT ALL:type - p  | QUIT:type - q        | CLEAR :type - c      |"
+	puts "ADD ITEM:type 'a'   | UPDATE ITEM:type 'u' | DELETE ITEM:type 'd' |"
+	puts "PRINT ALL:type 'p'  | QUIT:type 'q'        | DELETE ALL :type 'c' |"
 	puts "------------------------------------------------------------------"
 	answer = gets.chomp
 	case answer
@@ -95,9 +82,9 @@ loop do
 		print_items(db)
 	when "q" 
 		print_items(db)
+		puts "\xC2\xA9ShopFriendzy Ltd. :-)"
 		exit	
 	end
-
 end
 
 
