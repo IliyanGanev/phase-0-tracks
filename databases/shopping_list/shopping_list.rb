@@ -13,48 +13,48 @@ SQL
 
 db.execute(create_table)
 
-
+#add_item(db, "shoes", 2)
 
 def add_item(db, name, quantity)
 	db.execute("INSERT INTO items (name, quantity) VALUES (?, ?)", [name, quantity])
 end
 
-#add_item(db, "shoes", 2)
+#update_item(db, "tie", 1, 1)
 
 def update_item(db, name, quantity, id)
 	db.execute("UPDATE items SET name=?, quantity=? WHERE id=?", [name, quantity, id])
 end
 
-#update_item(db, "tie", 1, 1)
+#delete_item(db, "tie")
 
 def delete_item(db, id)
 	db.execute("DELETE FROM items WHERE id=?", [id])
 end
 
-#delete_item(db, "tie")
+#clear_table(db)
 
 def clear_table(db)
 	db.execute("DELETE FROM items")
 end
 
-#clear_table(db)
 
 items = db.execute("SELECT * FROM items")
 
 def print_items(db, items)
 	items = db.execute("SELECT * FROM items")
-	puts "======SHOPPING LIST======"
+	puts "\n=========SHOPPING LIST=========\n\n"
 	items.each do |item|
 		puts "item#{item["id"]}: |#{item["name"]}| quantity:#{item["quantity"]}"
 	end	
 
-	puts "========================="
+	puts "\n==============================="
 	
 end
 	print_items(db, items)
 
 loop do
-	puts "Type 'a' to add item,'u' to update, 'd' to delete item and 'c' to clear table. Type 'q' to quit."
+	puts "\nType 'a' to add item,'u' to update, 'd' to delete item and 'c' to clear table." 
+	puts "Type 'q' to quit!\n\n"
 	answer = gets.chomp
 	case answer
 	when 'a'
@@ -66,12 +66,14 @@ loop do
 			ammount = gets.chomp
 			break if ammount == 'done'
 			add_item(db, item, ammount)
+
 		end
 		print_items(db, items)
 	when "d"
 		puts "Type the number of the item you want to delete!"
 		id = gets.chomp
 		delete_item(db, id) 
+		puts "\nITEM #{id} was DELETED from the list!!!"
 	when "u"
 		puts "Type the number of the item you want to update!"
 		id = gets.chomp
