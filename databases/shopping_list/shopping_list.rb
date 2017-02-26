@@ -54,10 +54,10 @@ loop do
 			puts "Type an item to add! Type 'done' when finished!"
 			item = gets.chomp
 			break if item == 'done'
-			puts "Type ammount"
-			ammount = gets.chomp
-			break if ammount == 'done'
-			add_item(db, item, ammount)
+			puts "Type amount"
+			amount = gets.chomp
+			break if amount == 'done'
+			add_item(db, item, amount)
 		end
 		print_items(db)
 	when "d"
