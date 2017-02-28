@@ -23,3 +23,12 @@ Policy: short life time
 * Use shell skripts to increase leverage and portability.
 * Avoid captive user interfaces.
 * Make every program a filter.
+
+####In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
+
+* VPS is a software-crated emulation that mimics dedicated server within a shared hosting environment. A single physical server can run several virtual private servers, each running on different operating system and having dedicated CPU, RAM and storage. VPS are cheaper, easy to set up and appropriate for web sites with small traffic.
+
+####Why is it considered a bad idea to run programs as the root user on a Linux system?
+
+* It is a good practice to run applications on a useer level and leave the administrative tasks to the root user.
+* Running programs as the root user can cause a mistake to delete everything on the system or running a malicious code or a bug to cause a lot of damage to the entire system. Logging with your own user account can still cause damages, but to the home folder only.
