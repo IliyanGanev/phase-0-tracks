@@ -21,7 +21,7 @@ $(document).ready(function(){
     $("#pic1").animate({
       width: "900px",
       height: "250px"
-    	}, {
+    }, {
       duration: 5000,
       easing: "swing"   
     });
@@ -31,15 +31,15 @@ $(document).ready(function(){
   $("h2").click(function(){
     $("ul").animate({
       letterSpacing: "4px"
-    	}, {
+    }, {
       duration: 3000,
       easing: "swing"
     });
 
 
     $("ul").animate({
-     	letterSpacing: "1px"
-    	}, {
+      letterSpacing: "1px"
+    }, {
       duration: 1000,
       easing: "linear"
     });
@@ -51,17 +51,17 @@ $(document).ready(function(){
     $(this).animate({
       width: "800px",
       height: "300px"
-      }, {
+    }, {
       duration: 1000,
       easing: "swing"  
     });
-	});
+  });
 
   $("#pic1").mouseleave(function(){
     $(this).animate({
       width: "900px",
       height: "250px"
-    	}, {
+    }, {
       duration: 1000,
       easing: "swing"   
     });
