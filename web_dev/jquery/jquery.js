@@ -6,17 +6,19 @@ $(document).ready(function(){
     $("p").toggle(1500);
   });
 
-	$("h2").mouseenter(function(){
-    	$(this).css("background-color", "#cccccc");
+
+  $("h2").mouseenter(function(){
+    $(this).css("background-color", "#cccccc");
+  });
+
+
+  $("h2").mouseleave(function(){
+    $(this).css("background-color", "#EFF0E9");
 	});
 
-	$("h2").mouseleave(function(){
-    	$(this).css("background-color", "#EFF0E9");
-	});
 
-
-	$("h2").click(function(){
-		$("#pic1").animate({
+  $("h2").click(function(){
+    $("#pic1").animate({
       width: "900px",
       height: "250px"
     	}, {
@@ -26,7 +28,7 @@ $(document).ready(function(){
   });
 
 
-	$("h2").click(function(){
+  $("h2").click(function(){
     $("ul").animate({
       letterSpacing: "4px"
     	}, {
@@ -41,7 +43,7 @@ $(document).ready(function(){
       duration: 1000,
       easing: "linear"
     });
-	});
+  });
 
   //Play with pic1 element
 
@@ -55,7 +57,7 @@ $(document).ready(function(){
     });
 	});
 
-	$("#pic1").mouseleave(function(){
+  $("#pic1").mouseleave(function(){
     $(this).animate({
       width: "900px",
       height: "250px"
@@ -63,7 +65,7 @@ $(document).ready(function(){
       duration: 1000,
       easing: "swing"   
     });
-	});
+  });
 });
 
 
