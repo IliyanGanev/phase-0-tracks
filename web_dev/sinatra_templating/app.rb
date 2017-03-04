@@ -28,7 +28,7 @@ get '/students/update' do
   erb :update_student
 end
 
-# create new students via
+# update students via
 # a form
 
 post '/update_students' do
